@@ -1,0 +1,63 @@
+name: mars_rover_project
+description: A new Flutter project.
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+
+dependencies:
+  drift: ^1.5.0
+  shared_preferences: ^2.0.15
+  dio: ^4.0.6
+  dartz: ^0.10.1
+  connectivity_plus: ^2.3.5
+  cached_network_image: ^3.2.0
+  intl: ^0.17.0
+  equatable: ^2.0.3
+  get: ^4.6.5
+  path: ^1.8.0
+  path_provider: ^2.0.11
+  
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+  test:
+  mockito:
+  faker:
+  lint:
+  drift_dev:
+  build_runner:
+
+  flutter_lints: ^1.0.0
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: Anek
+      fonts:
+        - asset: assets/fonts/AnekLatin-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/AnekLatin-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/AnekLatin-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/AnekLatin-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/AnekLatin-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/AnekLatin-Light.ttf
+          weight: 300
+        - asset: assets/fonts/AnekLatin-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/AnekLatin-Thin.ttf
+          weight: 100
