@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:mars_rover_project/injection_container.dart' as di;
+import 'package:mars_rover_project/modules/home/presentation/pages/home_page.dart';
 import 'package:mars_rover_project/modules/splash/presentation/pages/splash_page.dart';
 
 Future<void> main() async {
@@ -16,6 +17,10 @@ Future<void> main() async {
         GetPage(
           name: '/',
           page: () => SplashPage(),
+        ),
+        GetPage(
+          name: '/home',
+          page: () => HomePage(),
         ),
       ],
     ),
