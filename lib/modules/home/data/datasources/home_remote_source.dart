@@ -7,7 +7,7 @@ abstract class HomeRemoteSource {
 }
 
 class HomeRemoteSourceImpl implements HomeRemoteSource {
-  late Http http;
+  Http http;
   HomeRemoteSourceImpl({required this.http});
 
   @override

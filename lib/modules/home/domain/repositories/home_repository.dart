@@ -4,4 +4,6 @@ import 'package:mars_rover_project/modules/home/data/model/rover_information.dar
 
 abstract class HomeRepository {
   Future<Either<Failure, RoverInformation>>? fetchData(String roverName);
+  Future<Either<Failure, bool>>? saveData(RoverInformation roverInformation);
+  Future<Either<Failure, List<RoverInformation>>>? getData();
 }

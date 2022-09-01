@@ -9,7 +9,16 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(),
+      body: ListView.builder(
+        itemCount: 3,
+        itemBuilder: (context, index) {
+          return const SizedBox(
+            child: Text(
+              "Curiosity Rover",
+            ),
+          );
+        },
+      ),
     );
   }
 }
