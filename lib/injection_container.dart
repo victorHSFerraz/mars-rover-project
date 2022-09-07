@@ -3,6 +3,7 @@ import 'package:dio/dio.dart';
 import 'package:get/get.dart';
 import 'package:mars_rover_project/core/database/database.dart';
 import 'package:mars_rover_project/core/network/http.dart';
+import 'package:mars_rover_project/core/network/network_info.dart';
 import 'package:mars_rover_project/modules/home/data/datasources/home_local_source.dart';
 import 'package:mars_rover_project/modules/home/data/datasources/home_remote_source.dart';
 import 'package:mars_rover_project/modules/home/data/repositories/home_repository.dart';
@@ -40,6 +41,7 @@ Future<void> init() async {
 
   //! Core
   Get.lazyPut(() => Database());
+  Get.lazyPut<NetworkInfo>(() => NetworkInfoImpl(connectivity: Get.find()));
 
   //! External
   final sharedPreferences = await SharedPreferences.getInstance();

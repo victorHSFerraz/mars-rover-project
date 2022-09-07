@@ -9,14 +9,28 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.builder(
-        itemCount: 3,
-        itemBuilder: (context, index) {
-          return const SizedBox(
-            child: Text(
-              "Curiosity Rover",
-            ),
-          );
+      body: Obx(
+        () {
+          if (controller.loading.value) {
+            return const CircularProgressIndicator();
+          } else {
+            return ListView.builder(
+              itemCount: controller.list.length,
+              itemBuilder: (context, index) {
+                return Obx(() {
+                  if (controller.list[index].photoManifest != null) {
+                    return SizedBox(
+                      child: Text(
+                        controller.list[index].photoManifest!.name ?? "",
+                      ),
+                    );
+                  } else {
+                    return Container();
+                  }
+                });
+              },
+            );
+          }
         },
       ),
     );

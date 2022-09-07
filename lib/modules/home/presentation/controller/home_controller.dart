@@ -25,7 +25,7 @@ class HomeController extends GetxController {
 
   RxBool loading = false.obs;
   RoverInformation roverInformation = RoverInformation();
-  List<RoverInformation> list = [];
+  RxList<RoverInformation> list = <RoverInformation>[].obs;
 
   Future<void> checkData() async {
     loading.value = true;
